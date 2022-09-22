@@ -1,6 +1,6 @@
 # Адаптивный одностраничный сайт
 
-![preview img](/rentals/preview.png)
+![preview img](/rental/preview.png)
 
 ### инструмент Gulp
 
