@@ -1,0 +1,105 @@
+.home {
+    background: $color-bg-two;
+    padding-top: 86px;
+    padding-bottom: 124px;
+
+    @include md {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+        column-gap: 143px;
+
+        @include lg {
+            column-gap: 0;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__data {
+        max-width: 573px;
+    }
+
+    &__title {
+        font-size: 64px;
+        color: $color-black;
+        font-weight: $font-extra-light;
+        line-height: 73px;
+
+        & span {
+            color: $color-blue;
+            font-weight: $font-light;
+        }
+
+        @include md {
+            font-size: 46px;
+            line-height: 60px;
+        }
+
+        @include xs {
+            font-size: 36px;
+            line-height: 45px;
+        }
+    }
+
+    &__title-mini {
+        padding-top: 33px;
+        font-weight: $font-regular;
+        font-size: 24px;
+        color: $color-blue;
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: $font-light;
+        padding-top: 20px;
+        line-height: 27px;
+
+        @include md {
+            text-align: justify;
+        }
+    }
+
+    &__description-mini {
+        font-weight: $font-light;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-grey;
+        padding-top: 10px;
+        padding-bottom: 24px;
+    }
+
+    &__img {
+        min-width: 474px;
+        padding-top: 45px;
+
+        @include lg {
+            min-width: 0;
+            padding-top: 0;
+        }
+
+        @include md {
+            display: none;
+        }
+
+        &-mini {
+            display: none;
+
+            @include md {
+                display: block;
+                max-width: 200px;
+                padding-bottom: 20px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__btn {
+        @include button;
+    }
+}

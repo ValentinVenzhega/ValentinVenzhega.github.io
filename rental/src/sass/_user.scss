@@ -1,0 +1,100 @@
+.user {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background: #287eff;
+    color: $color-white;
+
+    @include md {
+        padding-bottom: 40px;
+    }
+
+    @include xs {
+        padding-top: 80px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        column-gap: 70px;
+
+        @include md {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+
+    &__data {
+        @include md {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__description {
+        font-weight: $font-light;
+        font-size: 16px;
+        line-height: 23px;
+        padding-bottom: 16px;
+        max-width: 640px;
+
+        & span {
+            font-weight: $font-medium;
+            font-size: 22px;
+            line-height: 23px;
+        }
+
+        @include xs {
+            text-align: justify;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 144px;
+        height: 40px;
+        @include button-two;
+    }
+
+    &__text {
+        padding-top: 3px;
+    }
+
+    &__icon {
+        margin-left: 9px;
+        height: 22px;
+    }
+    &__img {
+        position: relative;
+    }
+    &__chrome {
+        width: 116px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__cube {
+        width: 157px;
+        position: absolute;
+        top: -31px;
+        right: -19px;
+        z-index: 1;
+    }
+    &__order {
+        &-one {
+            @include md {
+                order: 1;
+            }
+        }
+
+        &-two {
+            @include md {
+                order: 0;
+            }
+        }
+    }
+}

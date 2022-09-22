@@ -1,0 +1,127 @@
+.comparison {
+    padding-top: 117px;
+    padding-bottom: 121px;
+    background: linear-gradient(180deg, #066aff 0%, #74abff 183.04%);
+    color: $color-white;
+
+    @include xl {
+        text-align: center;
+    }
+
+    @include sm {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    @include xs {
+        text-align: center;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        @include title;
+        color: $color-white;
+
+        @include xs {
+            font-size: 36px;
+            line-height: 39px;
+        }
+    }
+
+    &__description {
+        font-weight: 200;
+        font-size: 22px;
+        line-height: 49px;
+        padding-top: 10px;
+        padding-bottom: 61px;
+
+        @include xs {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__data {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        border: 1px solid #005be3;
+        justify-content: center;
+        border-radius: 27px;
+        background: #0065fc;
+        z-index: 2;
+        position: relative;
+
+        @include xl {
+            margin: 0 auto;
+            max-width: 599px;
+            grid-template-columns: repeat(3, 199px);
+            border: none;
+            background: none;
+            grid-gap: 20px;
+        }
+
+        @include sm {
+            grid-template-columns: 199px;
+            width: 200px;
+        }
+    }
+
+    &__item {
+        border-right: 1px solid #64a2ff;
+        width: 200px;
+        transition: 0.5s;
+
+        &:last-child {
+            border-right: none;
+        }
+        &:hover {
+            background: linear-gradient(180deg, #053af4 -54.27%, #859ffb 100%);
+            box-shadow: 0px 2px 13px #1170ff;
+            cursor: pointer;
+        }
+
+        @include xl {
+            border-radius: 27px;
+            border: 1px solid #64a2ff;
+            background: #0065fc;
+        }
+    }
+    &__company {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85px;
+        border-bottom: 1px solid #64a2ff;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 161px;
+        text-align: center;
+    }
+    &__price {
+        font-weight: $font-light;
+        font-size: 32px;
+        line-height: 25px;
+        padding-bottom: 19px;
+    }
+    &__info {
+        width: 130px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 98px;
+        right: 0;
+        z-index: 1;
+
+        @include sm {
+            top: 94px;
+        }
+    }
+}

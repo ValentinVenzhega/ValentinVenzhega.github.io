@@ -1,0 +1,141 @@
+.benefits {
+    padding-top: 120px;
+    padding-bottom: 96px;
+    background: $color-bg-two;
+
+    @include md {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        @include title;
+        padding-bottom: 128px;
+
+        @include md {
+            font-size: 46px;
+            padding-bottom: 50px;
+        }
+
+        @include xs {
+            font-size: 36px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 140px;
+        justify-content: start;
+        align-items: end;
+
+        @include xl {
+            align-items: center;
+            column-gap: 60px;
+        }
+
+        @include md {
+            grid-template-columns: none;
+            gap: 40px;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        @include xs {
+            gap: 20px;
+        }
+    }
+
+    &__data {
+        text-align: center;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+        column-gap: 80px;
+        padding-bottom: 63px;
+
+        @include xl {
+            column-gap: 50px;
+        }
+
+        @include md {
+            column-gap: 40px;
+        }
+
+        @include xs {
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+            row-gap: 0px;
+            padding-bottom: 15px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include xs {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__img {
+        width: 92px;
+        height: 63px;
+        margin-bottom: 9px;
+        border: 0.4px solid $color-blue;
+        border-radius: 28px;
+        background: $color-bg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+
+        &:hover {
+            background: #e7f5ff;
+            cursor: pointer;
+        }
+
+        &-big img {
+            @include xl {
+                width: 380px;
+            }
+
+            @include md {
+                width: 250px;
+            }
+
+            @include xs {
+                width: 133px;
+            }
+        }
+    }
+
+    &__text {
+        width: 150px;
+    }
+
+    &__btn {
+        @include button;
+    }
+
+    &__order {
+        &-one {
+            @include md {
+                order: 1;
+            }
+        }
+
+        &-two {
+            @include md {
+                order: 0;
+            }
+        }
+    }
+}

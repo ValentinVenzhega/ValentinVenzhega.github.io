@@ -1,0 +1,120 @@
+.different {
+    @include section;
+    background: $color-bg-two;
+
+    @include md {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include xs {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    & .container {
+        @include xl {
+            padding: 0 60px 0 60px;
+        }
+
+        @include md {
+            padding: 0 40px 0 40px;
+        }
+
+        @include xs {
+            padding: 0 20px 0 20px;
+        }
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 45px;
+
+        @include xl {
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        @include md {
+            width: auto;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.6px solid $color-blue;
+        border-radius: 20px;
+        width: 370px;
+        height: 140px;
+
+        @include xs {
+            width: 280px;
+            height: 100px;
+        }
+    }
+
+    &__title {
+        @include title;
+        padding-bottom: 102px;
+
+        @include xl {
+            text-align: center;
+        }
+
+        @include md {
+            font-size: 46px;
+            padding-bottom: 40px;
+        }
+
+        @include xs {
+            font-size: 36px;
+        }
+    }
+
+    &__img {
+        width: 87px;
+        height: 57px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__apple {
+        margin-right: 4px;
+    }
+
+    &__text {
+        width: 180px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        margin-left: 25px;
+
+        & span {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: $color-blue;
+        }
+
+        @include xs {
+            margin-left: 10px;
+        }
+    }
+
+    &__img {
+        width: 100px;
+        background-color: $color-black;
+
+        @include xs {
+            width: 60px;
+        }
+    }
+}

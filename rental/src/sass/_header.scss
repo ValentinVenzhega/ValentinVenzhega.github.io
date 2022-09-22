@@ -1,0 +1,66 @@
+.header {
+    background: $color-bg-one;
+    font-weight: $font-medium;
+    font-size: 13px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include sm {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    &__button {
+        width: 120px;
+        height: 40px;
+        @include button-two;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    &__menu {
+        margin-left: auto;
+        width: initial;
+
+        @include sm {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 34px;
+        margin-right: 34px;
+
+        @include lg {
+            column-gap: 15px;
+        }
+
+        @include sm {
+            padding-top: 15px;
+            padding-bottom: 20px;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0;
+            row-gap: 15px;
+        }
+    }
+
+    &__link {
+        color: $color-white;
+        transition: 0.1s;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

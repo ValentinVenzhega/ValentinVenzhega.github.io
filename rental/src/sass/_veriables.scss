@@ -1,0 +1,141 @@
+/*=============== GOOGLE FONTS ===============*/
+// @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap");
+
+/*========== Font and typography ==========*/
+$body-font: "Manrope", sans-serif;
+
+/*========== Font weight ==========*/
+$font-extra-light: 200;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+/*========== Colors ==========*/
+$color-white: #ffffff;
+$color-white-two: #f2f2f2;
+$color-black: #000000;
+$color-grey: #6a798c;
+$color-grey-light: #8d9db4;
+$color-blue: #0037fc;
+$color-line: #dae1ec;
+$color-line-two: #d6e1f2;
+
+$color-blue-border: #005eeb;
+$color-bg: #ebf9ff;
+$color-bg-one: linear-gradient(180deg, #066aff 0%, #74abff 183.04%);
+$color-bg-two: linear-gradient(0deg, rgb(255, 255, 255) 72%, rgb(116, 171, 255) 130%);
+
+/*=============== REUSABLE CLASS ===============*/
+
+/*========== sizes device ==========*/
+
+@mixin xl {
+    @media (max-width: $viewport--xl) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: $viewport--lg) {
+        @content;
+        .container {
+            padding: 0 20px 0 20px;
+        }
+    }
+}
+
+@mixin md {
+    @media (max-width: $viewport--md) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: $viewport--sm) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: $viewport--xs) {
+        @content;
+    }
+}
+
+$viewport--xs: 576px;
+$viewport--sm: 838px;
+$viewport--md: 993px;
+$viewport--lg: 1112px;
+$viewport--xl: 1446px;
+
+/*========== element ==========*/
+
+@mixin button {
+    width: 219px;
+    height: 40px;
+    background: #0037fc;
+    border-radius: 16px;
+    color: $color-white;
+    font-weight: $font-medium;
+    font-size: 16px;
+    border: none;
+    transition: 0.4s;
+    &:hover {
+        background: #203fae;
+    }
+}
+
+@mixin button-two {
+    background: none;
+    text-transform: uppercase;
+    border: 1px solid $color-white;
+    border-radius: 16px;
+    color: $color-white;
+    font-size: 13px;
+    font-weight: $font-medium;
+    transition: 0.1s;
+
+    &:hover {
+        border: none;
+        color: $color-blue;
+        background: $color-white;
+    }
+}
+
+@mixin title {
+    font-size: 66px;
+    font-weight: $font-extra-light;
+    line-height: 49px;
+    color: $color-black;
+}
+
+@mixin section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+@mixin photo {
+    height: 151px;
+    width: 100px;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    margin: -129px auto;
+}
+
+body {
+    font-family: $body-font;
+    font-size: 16px;
+    color: $color-black;
+    transition: 0.3s;
+}
+
+.grid {
+    display: grid;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px 0 120px;
+}

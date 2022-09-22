@@ -1,0 +1,138 @@
+.testimonials {
+    @include section;
+    background: linear-gradient(180deg, #066aff 0%, #74abff 176.16%);
+
+    @include xl {
+        text-align: center;
+    }
+
+    @include sm {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    & .container {
+        @include xl {
+            padding: 0 40px 0 40px;
+        }
+    }
+
+    &__title {
+        @include title;
+        color: $color-white;
+        padding-bottom: 72px;
+
+        @include sm {
+            font-size: 46px;
+            padding-bottom: 40px;
+        }
+
+        @include xs {
+            font-size: 36px;
+            padding-bottom: 30px;
+        }
+    }
+    &__data {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 60px;
+
+        @include xl {
+            grid-template-columns: 1fr;
+            row-gap: 60px;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        @include xs {
+            row-gap: 40px;
+        }
+    }
+    &__item {
+        width: 360px;
+        text-align: center;
+        background: $color-white;
+        border: 0.6px solid $color-blue-border;
+        border-radius: 120px;
+        background: $color-white;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            background: $color-bg;
+            height: 115px;
+            border-bottom: 0.6px solid $color-blue-border;
+            border-radius: 140px 140px 0 0;
+        }
+
+        @include xs {
+            width: 290px;
+        }
+    }
+    &__circle {
+        margin: 0 auto;
+        margin-top: -82px;
+        background: $color-bg;
+        height: 156px;
+        width: 156px;
+        border: 0.6px solid $color-blue-border;
+        border-radius: 50%;
+    }
+    &__img-one {
+        @include photo;
+        background-image: url("../img/testimonials/jeremy.png");
+        background-position-x: -72px;
+    }
+
+    &__img-two {
+        @include photo;
+        background-image: url("../img/testimonials/matthew.png");
+        background-position-x: -100px;
+    }
+
+    &__img-three {
+        @include photo;
+        background-image: url("../img/testimonials/megan.png");
+        background-position-x: -108px;
+        background-position-y: -17px;
+    }
+
+    &__name {
+        margin-top: 144px;
+        font-weight: $font-light;
+        font-size: 22px;
+        line-height: 16px;
+        color: $color-blue;
+        padding-bottom: 11px;
+    }
+    &__city {
+        font-weight: $font-regular;
+        font-size: 14px;
+        line-height: 15px;
+        padding-bottom: 19px;
+    }
+    &__stars {
+        padding-bottom: 19px;
+
+        &-img {
+            padding-right: 8px;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+    &__text {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+        width: 255px;
+        margin: 0 auto;
+        padding-bottom: 48px;
+
+        @include xs {
+            width: 216px;
+        }
+    }
+}

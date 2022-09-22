@@ -29,7 +29,7 @@ const html = () => {
         .pipe(htmlmin(app.htmlmin))
         .pipe(size({ title: "После сжатия" }))
         .pipe(gulp.dest(path.html.dest))
-        .pipe(browser.stream()); // бновляем данные точечно
+        .pipe(browser.stream()); // обновляем данные точечно
 };
 
 export default html;

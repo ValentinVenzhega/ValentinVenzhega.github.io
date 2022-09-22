@@ -1,0 +1,93 @@
+.more {
+    @include section;
+    background: $color-bg-two;
+
+    @include lg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+    @include sm {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        @include title;
+        padding-bottom: 83px;
+
+        @include lg {
+            font-size: 46px;
+        }
+
+        @include sm {
+            padding-bottom: 40px;
+        }
+
+        @include xs {
+            font-size: 36px;
+            padding-bottom: 25px;
+        }
+    }
+
+    &__data {
+        display: flex;
+        align-items: flex-end;
+
+        @include lg {
+            justify-content: center;
+        }
+
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        padding-bottom: 20px;
+        font-weight: $font-regular;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    &__img {
+        width: 380px;
+
+        @include xs {
+            width: 280px;
+        }
+    }
+
+    &__line {
+        width: 1px;
+        height: 95px;
+        background: $color-line-two;
+        margin-left: 66px;
+        margin-right: 66px;
+
+        @include lg {
+            display: none;
+        }
+    }
+
+    &__item {
+        @include lg {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include sm {
+            margin-bottom: 20px;
+            margin-right: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
